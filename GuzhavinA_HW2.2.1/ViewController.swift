@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         super.viewDidLoad()
         
-        colorView.layer.cornerRadius = 20
+        colorView.layer.cornerRadius = colorView.frame.size.height / 10
         
         textFieldValue()
         
