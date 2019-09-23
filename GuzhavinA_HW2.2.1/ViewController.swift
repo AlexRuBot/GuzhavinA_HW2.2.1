@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     
@@ -27,6 +27,14 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         viewRGB()
         
+        addDoneButton()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
     }
 
     @IBAction func redSlider(_ sender: UISlider) {
@@ -86,26 +94,50 @@ class ViewController: UIViewController, UITextFieldDelegate{
         
         viewRGB()
     }
-
+    
+    func addDoneButton()
+    {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+        
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        redTextField.inputAccessoryView = doneToolbar
+        
+        greenTextField.inputAccessoryView = doneToolbar
+        
+        blueTextField.inputAccessoryView = doneToolbar
+    }
+    
+    @objc func doneButtonAction()
+    {
+        view.endEditing(true)
+        
+        viewRGB()
+    }
+    
     private func textFieldValue() {
 
-        redTextField.text = String(Int(redSliderOut.value))
+        let red = Int(redSliderOut.value)
+        
+        let green = Int(greenSliderOut.value)
+            
+        let blue = Int(blueSliderOut.value)
+            
+        redTextField.text = String(red)
 
-        greenTextField.text = String(Int(greenSliderOut.value))
+        greenTextField.text = String(green)
 
-        blueTextField.text = String(Int(blueSliderOut.value))
+        blueTextField.text = String(blue)
     }
     
     private func viewRGB() {
         colorView.backgroundColor = UIColor(red: (CGFloat(redSliderOut.value)/255), green: (CGFloat(greenSliderOut.value)/255), blue: (CGFloat(blueSliderOut.value)/255), alpha: 1.0)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if touches.first != nil {
-            view.endEditing(true)
-        }
-        super.touchesBegan(touches, with: event)
-    }
-    
 }
 
