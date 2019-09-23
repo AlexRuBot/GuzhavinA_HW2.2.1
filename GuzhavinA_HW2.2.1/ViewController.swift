@@ -31,7 +31,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     @IBAction func redSlider(_ sender: UISlider) {
         
-        redTextField.text = String(Int(redSliderOut.value))
+        let red:Int = Int(redSliderOut.value)
+        
+        redTextField.text = String(red)
         
         viewRGB()
         
@@ -39,14 +41,18 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func greenSlider(_ sender: UISlider) {
         
-        greenTextField.text = String(Int(greenSliderOut.value))
+        let green:Int = Int(greenSliderOut.value)
+            
+        greenTextField.text = String(green)
         
         viewRGB()
     }
     
     @IBAction func blueSlider(_ sender: UISlider) {
         
-        blueTextField.text = String(Int(blueSliderOut.value))
+        let blue:Int = Int(blueSliderOut.value)
+        
+        blueTextField.text = String(blue)
         
         viewRGB()
     }
@@ -59,10 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             }
         
         viewRGB()
-        
         }
-        
-    
     
     @IBAction func greenTextAction(_ sender: UITextField) {
         
