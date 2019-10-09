@@ -17,8 +17,6 @@ class ChangeColorVC: UIViewController {
     
     var delegate: ChangeColorVCDelegate!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = colorView.frame.size.height / 10
@@ -53,21 +51,21 @@ class ChangeColorVC: UIViewController {
     
     @IBAction func redTextAction(_ sender: UITextField) {
         if let red = redTextField.text {
-            self.redSliderOut.value = (red as NSString).floatValue
+            redSliderOut.value = (red as NSString).floatValue
             }
         viewRGB()
     }
     
     @IBAction func greenTextAction(_ sender: UITextField) {
         if let green = greenTextField.text {
-            self.greenSliderOut.value = (green as NSString).floatValue
+            greenSliderOut.value = (green as NSString).floatValue
             }
         viewRGB()
 }
     
     @IBAction func blueTextAction(_ sender: UITextField) {
         if let blue = blueTextField.text {
-            self.blueSliderOut.value = (blue as NSString).floatValue
+            blueSliderOut.value = (blue as NSString).floatValue
             }
         viewRGB()
         
@@ -78,11 +76,14 @@ class ChangeColorVC: UIViewController {
         dismiss(animated: true)
     }
     
-    func addDoneButton()
-    {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+    func addDoneButton() {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0,
+                                                                  y: 0,
+                                                                  width: UIScreen.main.bounds.width, height: 50))
         doneToolbar.barStyle = .default
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                        target: nil,
+                                        action: nil)
         let done: UIBarButtonItem = UIBarButtonItem(title: "Done",
                                                     style: .done,
                                                     target: self,
@@ -96,8 +97,7 @@ class ChangeColorVC: UIViewController {
         blueTextField.inputAccessoryView = doneToolbar
     }
     
-    @objc func doneButtonAction()
-    {
+    @objc func doneButtonAction() {
         view.endEditing(true)
         viewRGB()
     }
