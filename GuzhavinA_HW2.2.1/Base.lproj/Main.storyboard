@@ -19,7 +19,11 @@
                         <viewLayoutGuide key="safeArea" id="ylB-Le-tzL"/>
                     </view>
                     <navigationItem key="navigationItem" id="4V7-Rs-ZyY">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="GFd-qD-0Qm"/>
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="GFd-qD-0Qm">
+                            <connections>
+                                <action selector="clearButton:" destination="mgb-9k-xCs" id="ghq-9I-7eI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Change" id="geP-gy-ewG">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="wCP-UH-dtB"/>
@@ -86,7 +90,6 @@
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hq0-Ww-fgp"/>
-                                            <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="nK8-WQ-69z"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="s7w-Wz-b9a">
@@ -94,14 +97,12 @@
                                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="wUg-e9-nT2"/>
-                                            <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="tRU-Kg-EAA"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="HYb-7h-myW">
                                         <rect key="frame" x="-2" y="88" width="180" height="31"/>
                                         <connections>
                                             <action selector="blueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="zG4-CI-meK"/>
-                                            <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="eMV-sh-Gbr"/>
                                         </connections>
                                     </slider>
                                 </subviews>
