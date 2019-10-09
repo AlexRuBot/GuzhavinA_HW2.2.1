@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="ylB-Le-tzL"/>
                     </view>
                     <navigationItem key="navigationItem" id="4V7-Rs-ZyY">
-                        <barButtonItem key="rightBarButtonItem" title="Item" landscapeImage="square.and.pencil" catalog="system" id="geP-gy-ewG">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="geP-gy-ewG">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="wCP-UH-dtB"/>
                             </connections>
@@ -190,7 +190,4 @@
             <point key="canvasLocation" x="-746.39999999999998" y="111.99400299850076"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
-    </resources>
 </document>
