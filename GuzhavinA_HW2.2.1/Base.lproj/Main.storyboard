@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="ylB-Le-tzL"/>
                     </view>
                     <navigationItem key="navigationItem" id="4V7-Rs-ZyY">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="geP-gy-ewG">
+                        <barButtonItem key="rightBarButtonItem" title="Change" id="geP-gy-ewG">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="wCP-UH-dtB"/>
                             </connections>
