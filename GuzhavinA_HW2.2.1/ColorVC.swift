@@ -17,6 +17,11 @@ class ColorVC: UIViewController {
         let changeColor = segue.destination as! ChangeColorVC
         changeColor.delegate = self
     }
+    
+    @IBAction func clearButton(_ sender: UIBarButtonItem) {
+        view.backgroundColor = .white
+    }
+    
 }
 
 extension ColorVC: ChangeColorVCDelegate {

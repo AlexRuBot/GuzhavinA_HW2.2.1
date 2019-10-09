@@ -17,6 +17,8 @@ class ChangeColorVC: UIViewController {
     
     var delegate: ChangeColorVCDelegate!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = colorView.frame.size.height / 10

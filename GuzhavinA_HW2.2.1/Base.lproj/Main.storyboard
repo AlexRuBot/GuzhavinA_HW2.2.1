@@ -19,6 +19,11 @@
                         <viewLayoutGuide key="safeArea" id="ylB-Le-tzL"/>
                     </view>
                     <navigationItem key="navigationItem" id="4V7-Rs-ZyY">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="GFd-qD-0Qm">
+                            <connections>
+                                <action selector="clearButton:" destination="mgb-9k-xCs" id="w3t-pS-NNl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Change" id="geP-gy-ewG">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="wCP-UH-dtB"/>
@@ -82,14 +87,14 @@
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="1mu-NP-cpD">
                                         <rect key="frame" x="-2" y="0.0" width="180" height="31"/>
-                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hq0-Ww-fgp"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="s7w-Wz-b9a">
                                         <rect key="frame" x="-2" y="44" width="180" height="31"/>
-                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="wUg-e9-nT2"/>
                                         </connections>
