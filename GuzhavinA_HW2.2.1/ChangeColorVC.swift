@@ -17,9 +17,14 @@ class ChangeColorVC: UIViewController {
     
     var delegate: ChangeColorVCDelegate!
     
+    var redRGB: Float = 0.0
+    var greenRGB: Float = 0.0
+    var blueRGB: Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         colorView.layer.cornerRadius = colorView.frame.size.height / 10
+        changeSlider()
         textFieldValue()
         viewRGB()
         addDoneButton()
@@ -31,20 +36,20 @@ class ChangeColorVC: UIViewController {
     }
 
     @IBAction func redSlider(_ sender: UISlider) {
-        let red:Int = Int(redSliderOut.value)
+        let red = Int(redSliderOut.value)
         redTextField.text = String(red)
         viewRGB()
         
     }
     
     @IBAction func greenSlider(_ sender: UISlider) {
-        let green:Int = Int(greenSliderOut.value)
+        let green = Int(greenSliderOut.value)
         greenTextField.text = String(green)
         viewRGB()
     }
     
     @IBAction func blueSlider(_ sender: UISlider) {
-        let blue:Int = Int(blueSliderOut.value)
+        let blue = Int(blueSliderOut.value)
         blueTextField.text = String(blue)
         viewRGB()
     }
@@ -76,7 +81,7 @@ class ChangeColorVC: UIViewController {
         dismiss(animated: true)
     }
     
-    func addDoneButton() {
+    private func addDoneButton() {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0,
                                                                   y: 0,
                                                                   width: UIScreen.main.bounds.width, height: 50))
@@ -117,6 +122,12 @@ class ChangeColorVC: UIViewController {
                                             green: (CGFloat(greenSliderOut.value)/255),
                                             blue: (CGFloat(blueSliderOut.value)/255),
                                             alpha: 1.0)
+    }
+    
+    private func changeSlider() {
+        redSliderOut.value = redRGB
+        greenSliderOut.value = greenRGB
+        blueSliderOut.value = blueRGB
     }
 }
 
