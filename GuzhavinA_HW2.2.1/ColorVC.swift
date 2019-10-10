@@ -41,11 +41,11 @@ extension UIColor {
         var fAlfa:CGFloat = 0
         
         getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlfa)
-            let iRed = Float(fRed * 255)
-            let iGreen = Float(fGreen * 255)
-            let iBlue = Float(fBlue * 255)
+            let red = Float(fRed * 255)
+            let green = Float(fGreen * 255)
+            let blue = Float(fBlue * 255)
         
-        return (red:iRed, green:iGreen, blue:iBlue)
+        return (red:red, green:green, blue:blue)
     }
 }
 
